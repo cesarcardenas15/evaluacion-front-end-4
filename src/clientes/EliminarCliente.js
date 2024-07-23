@@ -40,17 +40,17 @@ function EliminarCliente() {
     return (
         <div className="container">
             <div className="card">
-                <h1>Eliminar Cliente</h1>
+                <h1 className="my-3">Eliminar Cliente</h1>
                 {error && (
                     <div className="alert alert-danger" role="alert">
                         {error}
                     </div>
                 )}
-                <div className="card-header">Confirme la elimación del cliente</div>
+                <div className="card-header my-3">Confirme la elimación del cliente</div>
                 <div className="card-body">
-                    <h1>¿Desea eliminar este cliente?</h1>
-                    <h2>{cliente && cliente.nombres} {cliente.apellidos}</h2>
-                    <button type="submit" className="btn btn-primary" onClick={onSubmit}>Eliminar Cliente</button>
+                    <h1 className="my-3">¿Desea eliminar este cliente?</h1>
+                    <h2 className="my-3">{cliente && cliente.nombres} {cliente.apellidos}</h2>
+                    <button type="submit" className="my-3 btn btn-primary" onClick={onSubmit}>Eliminar Cliente</button>
                 </div>
             </div>
         </div>

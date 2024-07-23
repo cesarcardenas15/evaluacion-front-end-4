@@ -41,17 +41,17 @@ function EliminarTipoGestion() {
     return (
         <div className="container">
             <div className="card">
-                <h1>Eliminar Tipo de Gestion</h1>
+                <h1 className="my-3">Eliminar Tipo de Gestion</h1>
                 {error && (
                     <div className="alert alert-danger" role="alert">
                         {error}
                     </div>
                 )}
-                <div className="card-header">Confirme la elimación del Tipo de Gestion</div>
+                <div className="card-header my-3">Confirme la elimación del Tipo de Gestion</div>
                 <div className="card-body">
-                    <h1>¿Desea eliminar este Tipo de Gestión?</h1>
-                    <h2>{tipo_gestion.nombre_tipo_gestion}</h2>
-                    <button type="submit" className="btn btn-primary" onClick={onSubmit}>Eliminar Tipo de Gestion</button>
+                    <h1 className="my-3">¿Desea eliminar este Tipo de Gestión?</h1>
+                    <h2 className="my-3">{tipo_gestion.nombre_tipo_gestion}</h2>
+                    <button type="submit" className="my-3 btn btn-primary" onClick={onSubmit}>Eliminar Tipo de Gestion</button>
                 </div>
             </div>
         </div>

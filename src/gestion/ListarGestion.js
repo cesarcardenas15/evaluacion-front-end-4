@@ -35,13 +35,13 @@ function ListarGestion() {
     }, []);
     return (
         <div className="container">
-            <h1>Lista de Gestion</h1>
+            <h1 className="my-3">Lista de Gestion</h1>
             <hr></hr>
             <div className="mb-3">
                 <a href="/gestion/agregar" className="btn btn-primary">Agregar Gestión</a>
             </div>
             <div className="card">
-                <div className="card-header">Lista de Gestiones registradas</div>
+                <div className="card-header my-3">Lista de Gestiones registradas</div>
                 <div className="card-body">
                     <table className="table">
                         <thead>

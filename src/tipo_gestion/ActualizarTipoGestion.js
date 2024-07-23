@@ -40,20 +40,20 @@ function ActualizarTipoGestion() {
 
     return (
         <div className="container">
-            <h1>Actualizar Tipo de Gestion</h1>
+            <h1 className="my-3">Actualizar Tipo de Gestion</h1>
             <hr></hr>
-            <div className="card-header">Complete los datos a actualizar</div>
+            <div className="card-header my-3">Complete los datos a actualizar</div>
             <div className="card-body">
                 <form onSubmit={onSubmit}>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>ID</label>
-                        <input type="number" className="form-control" value={id_tipo_gestion} disabled></input>
+                        <input type="number" className="form-control my-2" value={id_tipo_gestion} disabled></input>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>Nombre del Tipo de Gestión</label>
-                        <input type="text" className="form-control" value={nombre_tipo_gestion} onChange={(e) => setNombre(e.target.value)}></input>
+                        <input type="text" className="form-control my-2" value={nombre_tipo_gestion} onChange={(e) => setNombre(e.target.value)}></input>
                     </div>
-                    <button type="submit" className="btn btn-primary">Actualizar Tipo de Gestion</button>
+                    <button type="submit" className="my-3 btn btn-primary">Actualizar Tipo de Gestion</button>
                 </form>
             </div>
         </div>

@@ -38,7 +38,7 @@ function CrearCliente() {
 
     return (
         < div className="container" >
-            <h1>Agregar Cliente</h1>
+            <h1 className="my-3">Agregar Cliente</h1>
             <hr></hr>
             {error &&(
                 <div className="alert alert-danger" role="alert">
@@ -46,31 +46,31 @@ function CrearCliente() {
                 </div>
             )}
             <form onSubmit={onSubmit}>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>RUT</label>
-                    <input type="number" min={0} max={2147483647} className="form-control" value={id_cliente} onChange={(e) => setIdCliente(e.target.value)}></input>
+                    <input type="number" min={0} max={2147483647} className="form-control my-2" value={id_cliente} onChange={(e) => setIdCliente(e.target.value)}></input>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>DV</label>
-                    <input type="number" min={0} max={9} className="form-control" value={dv} onChange={(e) => setDv(e.target.value)}></input>
+                    <input type="number" min={0} max={9} className="form-control my-2" value={dv} onChange={(e) => setDv(e.target.value)}></input>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>Nombres</label>
-                    <input type="text" className="form-control" maxLength={45} value={nombres} onChange={(e) => setNombres(e.target.value)}></input>
+                    <input type="text" className="form-control my-2" maxLength={45} value={nombres} onChange={(e) => setNombres(e.target.value)}></input>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>Apellidos</label>
-                    <input type="text" className="form-control" maxLength={45} value={apellidos} onChange={(e) => setApellidos(e.target.value)}></input>
+                    <input type="text" className="form-control my-2" maxLength={45} value={apellidos} onChange={(e) => setApellidos(e.target.value)}></input>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>Email</label>
-                    <input type="email" className="form-control" maxLength={100} value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                    <input type="email" className="form-control my-2" maxLength={100} value={email} onChange={(e) => setEmail(e.target.value)}></input>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>Celular</label>
-                    <input type="number" className="form-control" min={0} max={2147483647} value={celular} onChange={(e) => setCelular(e.target.value)}></input>
+                    <input type="number" className="form-control my-2" min={0} max={2147483647} value={celular} onChange={(e) => setCelular(e.target.value)}></input>
                 </div>
-                <button type="submit" className="btn btn-primary">Crear cliente</button>
+                <button type="submit" className="my-3 btn btn-primary">Crear cliente</button>
             </form>
         </div>
     );

@@ -83,17 +83,17 @@ function ActualizarGestion() {
     console.log(gestion);
     return (
         <div className="container">
-            <h1>Actualizar Gestión</h1>
+            <h1 className="my-3">Actualizar Gestión</h1>
             <hr></hr>
-            <div className="card-header">Complete los datos a actualizar</div>
+            <div className="card-header my-3">Complete los datos a actualizar</div>
             <div className="card-body">
                 <form onSubmit={onSubmit}>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>ID</label>
-                        <input type="number" className="form-control" value={id_gestion} disabled></input>
+                        <input type="number" className="form-control my-2" value={id_gestion} disabled></input>
                     </div>
                     <div className="form-floating">
-                        <select className="form-select" value={id_usuario} onChange={(e) => setIdUsuario(e.target.value)}>
+                        <select className="form-select my-2" value={id_usuario} onChange={(e) => setIdUsuario(e.target.value)}>
                             {gestion.map((registro) => (
                                 <option value={registro.id_usuario}>{registro.nombre_usuario}</option>
                             ))}
@@ -101,7 +101,7 @@ function ActualizarGestion() {
                         <label for="floatingSelect">Usuario</label>
                     </div>
                     <div className="form-floating">
-                        <select className="form-select" value={id_tipo_gestion} onChange={(e) => setIdTipoGestion(e.target.value)}>
+                        <select className="form-select my-2" value={id_tipo_gestion} onChange={(e) => setIdTipoGestion(e.target.value)}>
                             {gestion.map((registro) => (
                                 <option value={registro.id_tipo_gestion}>{registro.nombre_tipo_gestion}</option>
                             ))}
@@ -109,7 +109,7 @@ function ActualizarGestion() {
                         <label for="floatingSelect">Tipo de Gestión</label>
                     </div>
                     <div className="form-floating">
-                        <select className="form-select" value={id_resultado} onChange={(e) => setIdResultado(e.target.value)}>
+                        <select className="form-select my-2" value={id_resultado} onChange={(e) => setIdResultado(e.target.value)}>
                             {gestion.map((registro) => (
                                 <option value={registro.id_resultado}>{registro.nombre_resultado}</option>
                             ))}
@@ -117,18 +117,18 @@ function ActualizarGestion() {
                         <label for="floatingSelect">Resultado</label>
                     </div>
                     <div className="form-floating">
-                        <select className="form-select" value={id_cliente} onChange={(e) => setIdCliente(e.target.value)}>
+                        <select className="form-select my-2" value={id_cliente} onChange={(e) => setIdCliente(e.target.value)}>
                             {gestion.map((registro) => (
                                 <option value={registro.id_cliente}>{registro.nombre_cliente}</option>
                             ))}
                         </select>
                         <label for="floatingSelect">Cliente</label>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>Comentarios</label>
-                        <input type="text" className="form-control" maxLength={45} value={comentarios} onChange={(e) => setComentarios(e.target.value)}></input>
+                        <input type="text" className="form-control my-2" maxLength={45} value={comentarios} onChange={(e) => setComentarios(e.target.value)}></input>
                     </div>
-                    <button type="submit" className="btn btn-primary">Actualizar Gestión</button>
+                    <button type="submit" className="my-3 btn btn-primary">Actualizar Gestión</button>
                 </form>
             </div>
         </div>

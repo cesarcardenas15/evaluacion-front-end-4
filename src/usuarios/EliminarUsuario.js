@@ -39,17 +39,17 @@ function EliminarUsuario() {
     return (
         <div className="container">
             <div className="card">
-                <h1>Eliminar Usuario</h1>
+                <h1 className="my-3">Eliminar Usuario</h1>
                 {error && (
                     <div className="alert alert-danger" role="alert">
                         {error}
                     </div>
                 )}
-                <div className="card-header">Confirme la elimación del usuario</div>
+                <div className="card-header my-3">Confirme la elimación del usuario</div>
                 <div className="card-body">
-                    <h1>¿Desea eliminar este usuario?</h1>
-                    <h2>{usuario && usuario.nombres} {usuario.apellidos}</h2>
-                    <button type="submit" className="btn btn-primary" onClick={onSubmit}>Eliminar Usuario</button>
+                    <h1 className="my-3">¿Desea eliminar este usuario?</h1>
+                    <h2 className="my-3">{usuario && usuario.nombres} {usuario.apellidos}</h2>
+                    <button type="submit" className="my-3 btn btn-primary" onClick={onSubmit}>Eliminar Usuario</button>
                 </div>
             </div>
         </div>

@@ -30,7 +30,7 @@ function CrearResultado() {
 
     return (
         < div className="container" >
-            <h1>Agregar Resultado</h1>
+            <h1 className="my-3">Agregar Resultado</h1>
             <hr></hr>
             {error &&(
                 <div className="alert alert-danger" role="alert">
@@ -38,14 +38,14 @@ function CrearResultado() {
                 </div>
             )}
             <form onSubmit={onSubmit}>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>RUT</label>
-                    <input type="number" min={0} max={2147483647} className="form-control" value={id_resultado} onChange={(e) => setIdResultado(e.target.value)}></input>
+                    <input type="number" min={0} max={2147483647} className="form-control my-2" value={id_resultado} onChange={(e) => setIdResultado(e.target.value)}></input>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>Nombre</label>
-                    <input type="text" className="form-control" maxLength={45} value={nombre_resultado} onChange={(e) => setNombre(e.target.value)}></input>
-                <button type="submit" className="btn btn-primary">Crear Resultado</button>
+                    <input type="text" className="form-control my-2" maxLength={45} value={nombre_resultado} onChange={(e) => setNombre(e.target.value)}></input>
+                <button type="submit" className="my-3 btn btn-primary">Crear Resultado</button>
                 </div>
             </form>
         </div>

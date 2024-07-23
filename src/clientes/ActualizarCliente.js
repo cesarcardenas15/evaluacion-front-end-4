@@ -52,36 +52,36 @@ function ActualizarCliente() {
 
     return (
         <div className="container">
-            <h1>Actualizar Cliente</h1>
+            <h1 className="my-3">Actualizar Cliente</h1>
             <hr></hr>
-            <div className="card-header">Complete los datos a actualizar</div>
+            <div className="card-header my-3">Complete los datos a actualizar</div>
             <div className="card-body">
                 <form onSubmit={onSubmit}>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>RUT</label>
-                        <input type="number" className="form-control" value={id_cliente} disabled></input>
+                        <input type="number" className="form-control my-2" value={id_cliente} disabled></input>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>DV</label>
-                        <input type="number" className="form-control" min={0} max={9} value={dv} onChange={(e) => setDv(e.target.value)}></input>
+                        <input type="number" className="form-control my-2" min={0} max={9} value={dv} onChange={(e) => setDv(e.target.value)}></input>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>Nombres</label>
-                        <input type="text" className="form-control" value={nombres} onChange={(e) => setNombres(e.target.value)}></input>
+                        <input type="text" className="form-control my-2" value={nombres} onChange={(e) => setNombres(e.target.value)}></input>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>Apellidos</label>
-                        <input type="text" className="form-control" value={apellidos} onChange={(e) => setApellidos(e.target.value)}></input>
+                        <input type="text" className="form-control my-2" value={apellidos} onChange={(e) => setApellidos(e.target.value)}></input>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>Email</label>
-                        <input type="email" className="form-control" maxLength={100} value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                        <input type="email" className="form-control my-2" maxLength={100} value={email} onChange={(e) => setEmail(e.target.value)}></input>
                     </div>
-                    <div className="form-group">
+                    <div className="form-group my-2">
                         <label>Celular</label>
-                        <input type="number" className="form-control" min={0} max={2147483647} value={celular} onChange={(e) => setCelular(e.target.value)}></input>
+                        <input type="number" className="form-control my-2" min={0} max={2147483647} value={celular} onChange={(e) => setCelular(e.target.value)}></input>
                     </div>
-                    <button type="submit" className="btn btn-primary">Actualizar Cliente</button>
+                    <button type="submit" className="my-3 btn btn-primary">Actualizar Cliente</button>
                 </form>
             </div>
         </div>

@@ -17,13 +17,13 @@ function ListarResultados() {
 
     return (
         <div className="container">
-            <h1>Lista de Resultados</h1>
+            <h1 className="my-3">Lista de Resultados</h1>
             <hr></hr>
             <div className="mb-3">
                 <a href="/resultados/agregar" className="btn btn-primary">Agregar Resultado</a>
             </div>
             <div className="card">
-                <div className="card-header">Lista de Resultados registrados</div>
+                <div className="card-header my-3">Lista de Resultados registrados</div>
                 <div className="card-body">
                     <table className="table">
                         <thead>

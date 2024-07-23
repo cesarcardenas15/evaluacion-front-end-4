@@ -30,7 +30,7 @@ function CrearTipoGestion() {
 
     return (
         < div className="container" >
-            <h1>Agregar Tipo Gestión</h1>
+            <h1 className="my-3">Agregar Tipo Gestión</h1>
             <hr></hr>
             {error &&(
                 <div className="alert alert-danger" role="alert">
@@ -38,14 +38,14 @@ function CrearTipoGestion() {
                 </div>
             )}
             <form onSubmit={onSubmit}>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>RUT</label>
-                    <input type="number" min={0} max={2147483647} className="form-control" value={id_tipo_gestion} onChange={(e) => setIdTipoGestion(e.target.value)}></input>
+                    <input type="number" min={0} max={2147483647} className="form-control my-2" value={id_tipo_gestion} onChange={(e) => setIdTipoGestion(e.target.value)}></input>
                 </div>
-                <div className="form-group">
+                <div className="form-group my-2">
                     <label>Nombre</label>
-                    <input type="text" className="form-control" maxLength={45} value={nombre_tipo_gestion} onChange={(e) => setNombre(e.target.value)}></input>
-                <button type="submit" className="btn btn-primary">Crear Tipo de Gestión</button>
+                    <input type="text" className="form-control my-2" maxLength={45} value={nombre_tipo_gestion} onChange={(e) => setNombre(e.target.value)}></input>
+                <button type="submit" className="my-3 btn btn-primary">Crear Tipo de Gestión</button>
                 </div>
             </form>
         </div>

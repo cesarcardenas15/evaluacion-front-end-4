@@ -17,13 +17,13 @@ function ListarTipoGestion() {
 
     return (
         <div className="container">
-            <h1>Lista de Tipos de Gestión</h1>
+            <h1 className="my-3">Lista de Tipos de Gestión</h1>
             <hr></hr>
             <div className="mb-3">
                 <a href="/tipo_gestion/agregar" className="btn btn-primary">Agregar Tipo de Gestión</a>
             </div>
             <div className="card">
-                <div className="card-header">Lista de Tipos de Gestión registrados</div>
+                <div className="card-header my-3">Lista de Tipos de Gestión registrados</div>
                 <div className="card-body">
                     <table className="table">
                         <thead>
