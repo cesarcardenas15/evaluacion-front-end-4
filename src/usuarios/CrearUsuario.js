@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-function CrearCliente() {
-    const [id_cliente, setIdCliente] = useState("");
+function CrearUsuario() {
+    const [id_usuario, setIdCliente] = useState("");
     const [dv, setDv] = useState("");
     const [nombres, setNombres] = useState("");
     const [apellidos, setApellidos] = useState("");
@@ -20,8 +20,8 @@ function CrearCliente() {
 
         try {
             const fecha_registro = new Date().toISOString().slice(0, 19).replace("T", " ");
-            await axios.post("http://144.126.210.74:8080/api/cliente", {
-                id_cliente,
+            await axios.post("http://144.126.210.74:8080/api/usuario", {
+                id_usuario,
                 dv,
                 nombres,
                 apellidos,
@@ -31,7 +31,7 @@ function CrearCliente() {
                 password,
                 fecha_registro
             });
-            navigate("/clientes");
+            navigate("/usuarios");
         } catch (error) {
             console.log(error);
             if (error.response) {
@@ -42,7 +42,7 @@ function CrearCliente() {
 
     return (
         < div className="container" >
-            <h1 className="my-3">Agregar Cliente</h1>
+            <h1 className="my-3">Agregar Usuario</h1>
             <hr></hr>
             {error && (
                 <div className="alert alert-danger" role="alert">
@@ -52,7 +52,7 @@ function CrearCliente() {
             <form onSubmit={onSubmit}>
                 <div className="form-group my-2">
                     <label>RUT</label>
-                    <input type="number" min={0} max={2147483647} className="form-control my-2" value={id_cliente} onChange={(e) => setIdCliente(e.target.value)}></input>
+                    <input type="number" min={0} max={2147483647} className="form-control my-2" value={id_usuario} onChange={(e) => setIdCliente(e.target.value)}></input>
                 </div>
                 <div className="form-group my-2">
                     <label>DV</label>
@@ -82,9 +82,9 @@ function CrearCliente() {
                     <label>Contraseña</label>
                     <input type="password" className="form-control my-2" maxLength={200} value={password} onChange={(e) => setPassword(e.target.value)}></input>
                 </div>
-                <button type="submit" className="my-3 btn btn-primary">Crear cliente</button>
+                <button type="submit" className="my-3 btn btn-primary">Crear Usuario</button>
             </form>
         </div>
     );
 }
-export default CrearCliente;
+export default CrearUsuario;

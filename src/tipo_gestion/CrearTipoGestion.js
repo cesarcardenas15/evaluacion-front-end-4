@@ -15,7 +15,6 @@ function CrearTipoGestion() {
         try {
             const fecha_registro = new Date().toISOString().slice(0, 19).replace("T", " ");
             await axios.post("http://144.126.210.74:8080/api/tipo_gestion", {
-                id_tipo_gestion,
                 nombre_tipo_gestion,
                 fecha_registro
             });
@@ -38,10 +37,6 @@ function CrearTipoGestion() {
                 </div>
             )}
             <form onSubmit={onSubmit}>
-                <div className="form-group my-2">
-                    <label>RUT</label>
-                    <input type="number" min={0} max={2147483647} className="form-control my-2" value={id_tipo_gestion} onChange={(e) => setIdTipoGestion(e.target.value)}></input>
-                </div>
                 <div className="form-group my-2">
                     <label>Nombre</label>
                     <input type="text" className="form-control my-2" maxLength={45} value={nombre_tipo_gestion} onChange={(e) => setNombre(e.target.value)}></input>

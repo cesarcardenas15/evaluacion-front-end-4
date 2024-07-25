@@ -50,7 +50,7 @@ function ActualizarResultado() {
                         <input type="number" className="form-control my-2" value={id_resultado} disabled></input>
                     </div>
                     <div className="form-group my-2">
-                        <label>Nombre del Tipo de Gestión</label>
+                        <label>Nombre</label>
                         <input type="text" className="form-control my-2" value={nombre_resultado} onChange={(e) => setNombre(e.target.value)}></input>
                     </div>
                     <button type="submit" className="my-3 btn btn-primary">Actualizar Resultado</button>

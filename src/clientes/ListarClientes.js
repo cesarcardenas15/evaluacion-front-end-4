@@ -47,8 +47,8 @@ function ListarClientes() {
                                     <td>{cliente.email}</td>
                                     <td>{cliente.celular}</td>
                                     <td>
-                                        < Link to={`/clientes/eliminar/ ${cliente.id_cliente}`} className="btn btn-danger">Eliminar</Link>
-                                        < Link to={`/clientes/actualizar/ ${cliente.id_cliente}`} className="btn btn-warning">Actualizar</Link>
+                                        < Link to={`/clientes/eliminar/${cliente.id_cliente}`} className="btn btn-danger">Eliminar</Link>
+                                        < Link to={`/clientes/actualizar/${cliente.id_cliente}`} className="btn btn-warning">Actualizar</Link>
                                     </td>
                                 </tr>
                             ))}

@@ -28,7 +28,7 @@ function EliminarResultado() {
         try {
             const response = await axios.delete(`http://144.126.210.74:8080/api/resultado/${id}`);
             setResultado(response.data[0]);
-            navigate("/resultado");
+            navigate("/resultados");
         } catch (error) {
             console.log(error);
             if (error.response) {
